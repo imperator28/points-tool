@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# RedeemWise: Points Redemption Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Designed by Jiyu. Developed by Gemini.
 
-Currently, two official plugins are available:
+RedeemWise is a smart, modern tool specifically designed for travelers to evaluate the worth of their airline miles and hotel points. It helps you determine whether a points redemption is a "good deal" by comparing your redemption value (Cents Per Point) against real-time market valuations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+Financial Value Analysis (CPP): Instantly calculates the Cents Per Point (CPP) of any redemption and compares it to a benchmark value.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Cost Efficiency Analysis (PPM): For airlines, it calculates the Points Per Mile (PPM) cost to see if you are overspending on a short flight.
 
-## Expanding the ESLint configuration
+Flight Distance Calculator: Built-in Haversine formula to calculate Great Circle distances between major global airports (JFK, LHR, HND, etc.).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Smart Add via AI: A simulated AI feature that "searches" a knowledge base to let you add new airline or hotel programs dynamically.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Multi-Currency Support: Input cash prices in USD, EUR, GBP, JPY, and more, with automatic conversion to USD for standardized comparison.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Responsive Design: Fully optimized for smartphones, tablets, and desktops.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Node.js (LTS version recommended)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+Clone the repository:
+
+git clone [https://github.com/YOUR_USERNAME/points-tool.git](https://github.com/YOUR_USERNAME/points-tool.git)
+cd points-tool
+
+
+### Install dependencies:
+
+npm install
+# Ensure Tailwind CSS is installed correctly
+npm install -D tailwindcss@3 postcss autoprefixer
+
+
+### Run the development server:
+
+npm run dev
+
+
+Open http://localhost:5173 in your browser.
+
+## 🛠️ Tech Stack
+
+Frontend: React (TypeScript)
+
+Styling: Tailwind CSS
+
+Build Tool: Vite
+
+Icons: Lucide React
+
+## 📱 Mobile Compatibility
+
+The application is built with a "Mobile-First" approach using Tailwind CSS.
+
+Adaptive Layouts: The program list automatically resizes on smaller screens to keep the calculator visible.
+
+Touch Targets: Buttons and inputs are sized (44px+) for easy tapping.
+
+Viewport Protection: Input text size is set to 16px to prevent auto-zooming on iOS devices.
+
+## 📄 License & Copyright
+
+2025 Copyright.
+Designed by Jiyu. Developed by Gemini.
+
+All rights reserved.
